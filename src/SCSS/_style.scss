@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.App {
+    width: 100%;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.homepage {
+    width: 100vw;
+    height: 1000px;
+
+}
+
+.card {
+    position: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    background-color: white;
+    margin: 15px;
+    padding: 15px;
+    border: 0px !important;
+
+    .img {
+        position: relative;
+        width: 100%;
+        height: 210px;
+        border-radius: 5px;
+
+        img {
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .category {
+            background-color: #0d6dfd8c;
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            color: white;
+        }
+    }
+
+    .info:hover .summary {
+        display: block;
+        transition: 1s;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        margin-top: 10px;
+
+        .book {
+            font-weight: 600;
+            font-size: 20px;
+            color: $secondary;
+            margin: 0;
+            padding: 0;
+        }
+
+        .author {
+            font-weight: 500;
+            font-size: 15px;
+            color: $primary;
+            margin-top: 5px;
+        }
+
+        .summary {
+            transition: 1s;
+            display: none;
+            text-align: left;
+            font-size: 13px;
+            margin-bottom: 5px;
+
+        }
+
+        .price-details {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            width: 100%;
+
+            del {
+                font-weight: 400;
+                font-size: 15px;
+                margin-bottom: 2px;
+                color: $secondary;
+            }
+
+            p {
+                font-weight: 600;
+                margin-left: 5px;
+                font-size: 20px;
+                padding: 0;
+                margin: 0;
+                margin-left: 5px;
+                color: $primary;
+            }
+        }
+
+        .actions {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 8px;
+
+            button {
+                width: 75%;
+            }
+
+            :hover {
+                background-color: $primary;
+            }
+
+            .favorite {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
