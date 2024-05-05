@@ -13,6 +13,11 @@ body{
     display: flex;
     align-items: center;
     overflow-y: hidden;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; 
 
 }
 .container{
@@ -60,9 +65,11 @@ body{
 }
 .container .card .about .book-name{
     letter-spacing: 1px;
+    color: rgba(32, 32, 32, 0.973);
 }
 .container .card .about .author{
-
+    font-weight: 500;
+    color: rgba(32, 32, 32, 0.644);
 }
 .container .card .about .summary{
     width: 100%;
@@ -72,4 +79,5 @@ body{
     text-overflow:ellipsis;
     margin-top: 5px;
     font-size: 14px;
+    color: rgba(32, 32, 32, 0.486);
 } 
