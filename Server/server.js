@@ -12,17 +12,17 @@ const connection = mysql.createConnection({
 
 connection.connect((err) => {
   if (err) {
-    console.error('Error connecting to MySQL database: ' + err.stack);
+    console.error('MySQL verilənlər bazasına qoşularkən problem yarandı: ' + err.stack);
     return;
   }
-  console.log('Connected to MySQL database as id ' + connection.threadId);
+  console.log('MySQL ə qoşuldu database id: ' + connection.threadId);
 });
 
 app.get('/', (req, res) => {
   connection.query('SELECT * FROM books', (err, results) => {
     if (err) {
-      console.error('Error querying the database: ' + err.stack);
-      res.status(500).json({ error: 'Internal server error' });
+      console.error('Sorğunun icrası zamanı problem yarandı' + err.stack);
+      res.status(500).json({ error: 'Server Error' });
       return;
     }
     res.json(results);
@@ -30,5 +30,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log('Server is running on port 3000 http://localhost:3000');
+  console.log('Server 3000 portda işləyir http://localhost:3000');
 });

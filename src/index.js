@@ -1,14 +1,14 @@
-const container = document.getElementsByClassName("container")[0]; // Get the first element with class "container"
+const container = document.getElementsByClassName("container")[0]; // container classlı elementin tapılması
 
-fetch('http://localhost:3000')
+fetch('http://localhost:3000') // server portuna api sorğu
     .then(response => {
         if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error('Sorğuda problem var');
         }
-        return response.json(); // Assuming response is JSON, adjust accordingly
+        return response.json(); // responsun JSON formatına çevrilməsi
     })
     .then(data => {
-        // Handle the data received
+        // data gəldikdən sonra icra olunan əməliyyatlar
         console.log(data);
         data.forEach(item => {
             let book_card = `
@@ -23,13 +23,13 @@ fetch('http://localhost:3000')
                 </div>
             </div>
             `;
-            // Create a new div element to hold the book card HTML
+            // HTML ə əlavə olunması üçün yeni div elementinin yaradılması
             const bookCardDiv = document.createElement('div');
-            bookCardDiv.innerHTML = book_card; // Set the innerHTML of the div to the book_card HTML
-            container.appendChild(bookCardDiv); // Append the div's contents to the container
+            bookCardDiv.innerHTML = book_card; // div elementinin daxiliində olan elementlərin İnnerHTML ilə daxil edilməsi
+            container.appendChild(bookCardDiv); // div elementinin append vasitəsi ilə HTMLə göndərilməsi
         });
     })
     .catch(error => {
-        // Handle errors
-        console.error('There was a problem with the fetch operation:', error);
+        // Errorlar
+        console.error('datanın əldə edilməsi zamanı problem yarandı', error);
     });
