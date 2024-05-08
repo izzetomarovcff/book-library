@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+body{
+    width: 100%;
+}
+.App{
+    width: 100%;
+}
+.nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    .pages{
+        display: flex;
+        flex-direction: row;
+        .linkto{
+            font-size: 20px;
+            text-decoration: none;
+            margin: 15px 15px;
+            color: $secondary;
+            transition: ease-in .2s;
+        }
+        :hover{
+            color: $primary;
+        }
+    }
+    .registery{
+        display: flex;
+        flex-direction: row;
+        .linkto{
+            font-size: 20px;
+            text-decoration: none;
+            margin: 15px 10px;
+            color: $secondary;
+            transition: ease-in .2s;
+        }
+        :hover{
+            color: $primary;
+        }
+    }
+}
+.signup, .login{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: $light;
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        background-color: $light;
+        .form{
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+.home{
+    margin-top: 70px;
+    width: 100%;
+    height: 1000px;
+}
