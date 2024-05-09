@@ -1,13 +1,18 @@
+import { signOut } from 'firebase/auth'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { IsLogIn } from '../Redux/actions'
+import { auth } from '../firebase'
 
 function Navbar() {
-  const dispatch = useDispatch()
   const {GeneralResponse} = useSelector(state=>state)
   const handleLogOut = ()=>{
-    dispatch(IsLogIn(false))
+    signOut(auth).then(()=>{
+      console.log("Uğurla Çıxış edildi!")
+      window.location ="/"
+    }).catch((error)=>{
+      console.log(error)
+    })
   }
   return (
     <div className='nav bg-light shadow-sm'>
