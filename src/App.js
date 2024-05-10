@@ -11,6 +11,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase';
 import PrivateRoute from './privateroutes/PrivateRoute';
 import Books from './pages/Books';
+import Admin from './pages/Admin';
 function App() {
   const dispatch = useDispatch(state=>state)
   useEffect(()=>{
@@ -33,6 +34,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Home/>} />
               <Route path='/books' element={<Books/>} />
+              <Route path='/admin' element={<Admin/>} />
               <Route element={<PrivateRoute/>}>
                 <Route path='/login' element={<Login/>} />
                 <Route path='/signup' element={<Signup/>} />
