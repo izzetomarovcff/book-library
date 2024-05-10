@@ -4,3 +4,9 @@ export const  IsLogIn = islogin =>{
         payload: islogin
     }
 }
+export const SetUser = user =>{
+    return{
+        type:"SET_USER",
+        payload:user
+    }
+}

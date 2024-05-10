@@ -20,6 +20,7 @@ function Navbar() {
             <Link to={"/"} className='linkto'>Əsas Səhifə</Link>
             <Link to={"/books"} className='linkto'>Kitablar</Link>
             <Link to={"/cart"} className='linkto'>Səbət</Link>
+            {GeneralResponse.user == null ? (null):(GeneralResponse.user.email == process.env.REACT_APP_FIREBASE_ADMIN_EMAIL ? (<Link to={"/admin"} className='linkto'>Admin</Link>):(null))}
         </div>
         {GeneralResponse.is_login ? (
           <div className='registery me-5'>
