@@ -37,6 +37,18 @@ app.get('/getcategory', (req, res) => {
     res.json(results);
   });
 });
+app.post('/search',(req,res)=>{
+  const {search} = req.body
+  const sql = `SELECT * FROM books WHERE (book_name LIKE '%${search}%') OR (book_author LIKE '%${search}%')`
+  connection.query(sql,(err,results)=>{
+    if(err){
+      console.error('Error querying the database: ' + err.stack);
+      res.status(500).json({ error: 'Internal server error' });
+      return;
+    }
+    res.json(results)
+  });
+});
 app.post('/newbook', (req, res) => {
   const { book_image_url, book_category, book_name, book_author, book_summary, have_sale, old_price, price } = req.body;
   const sql = 'INSERT INTO books (book_image_url, book_category, book_name, book_author, book_summary, have_sale, old_price, price) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';

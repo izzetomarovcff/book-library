@@ -2,10 +2,26 @@ import React, { useEffect, useState } from 'react'
 import Card from '../components/Card'
 
 function Books() {
-    const [search, setSearch] = useState("")
+    const [search, setSearch] = useState({
+        search:""
+    })
     const [data, setData] = useState(null)
     const handleSubmit = (e) => {
         e.preventDefault()
+        fetch("http://localhost:3001/search",{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(search)
+        })
+        .then(response => response.json())
+        .then(data=>{
+            setData(data)
+        })
+        .catch(error=>{
+            console.log(error)
+        })
     }
     useEffect(() => {
         fetch("http://localhost:3001/getbooks")
@@ -20,11 +36,18 @@ function Books() {
                 setData(data)
             })
     }, [])
+     const handleSearchChange = (e)=>{
+        const { name, value } = e.target;
+        setSearch(prevState => ({
+            ...prevState,
+            [name]: value
+        }))
+     }
     return (
         <div className='books'>
             <form className='w-50 d-flex mt-3' onSubmit={handleSubmit}>
                 <div className="input-group mb-3 w-100">
-                    <input type="text" className="form-control berder border-primary" placeholder="Kitab Adı, Müəllif Adı və s. Axtar" value={search} onChange={(e) => { setSearch(e.target.value) }} />
+                    <input type="text" className="form-control berder border-primary" placeholder="Kitab Adı, Müəllif Adı və s. Axtar" value={search.search} name='search' onChange={handleSearchChange} />
                     <button className="btn btn-primary" type="submit">Axtar</button>
                 </div>
             </form>

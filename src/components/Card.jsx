@@ -14,7 +14,7 @@ function Card(props) {
                 <p className="book-summary">{props.data.book_summary}</p>
             </div>
             <div className="prices">
-                <del className='old-price'>{props.data.old_price}$</del>
+                {props.data.have_sale ? (<del className='old-price'>{props.data.old_price}$</del>):(null)}
                 <p className='new-price'>{props.data.price}$</p>
             </div>
             <div className='events'>

@@ -4,17 +4,21 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 ::-webkit-scrollbar {
     width: 0px;
     height: 0px;
-  }
-body{
+}
+
+body {
     width: 100%;
 }
-.App{
+
+.App {
     width: 100%;
 }
-.nav{
+
+.nav {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -23,24 +27,29 @@ body{
     position: fixed;
     top: 0;
     z-index: 100;
-    .pages{
+
+    .pages {
         display: flex;
         flex-direction: row;
-        .linkto{
+
+        .linkto {
             font-size: 20px;
             text-decoration: none;
             margin: 15px 15px;
             color: $secondary;
             transition: ease-in .2s;
         }
-        :hover{
+
+        :hover {
             color: $primary;
         }
     }
-    .registery{
+
+    .registery {
         display: flex;
         flex-direction: row;
-        .linkto{
+
+        .linkto {
             font-size: 20px;
             text-decoration: none;
             margin: 15px 10px;
@@ -48,45 +57,54 @@ body{
             transition: ease-in .2s;
             cursor: pointer;
         }
-        :hover{
+
+        :hover {
             color: $primary;
         }
     }
 }
-.footer{
+
+.footer {
     width: 100%;
     margin-top: 50px;
     background-color: $forfooter;
     display: flex;
     flex-direction: column;
     padding-top: 20px;
-    .links{
+
+    .links {
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        .info{
+
+        .info {
             width: 200px;
             display: flex;
             flex-direction: column;
-            a{
+
+            a {
                 text-decoration: none;
                 transition: ease-in .2s;
             }
         }
-        
+
     }
-    .footer-bottom{
+
+    .footer-bottom {
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        a{
+
+        a {
             text-decoration: none;
         }
     }
 }
-.signup, .login{
+
+.signup,
+.login {
     position: absolute;
     top: 0;
     display: flex;
@@ -96,16 +114,19 @@ body{
     height: 100vh;
     z-index: 100;
     background-color: $light;
-    a{
+
+    a {
         text-decoration: none;
     }
-    .card{
+
+    .card {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 50%;
         background-color: $light;
-        .form{
+
+        .form {
             width: 60%;
             display: flex;
             flex-direction: column;
@@ -113,40 +134,48 @@ body{
         }
     }
 }
-.home{
+
+.home {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 70px;
     width: 100%;
-    .homecontainer{
+
+    .homecontainer {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 90%;
-        .wellcome{
+
+        .wellcome {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-around;
             width: 100%;
-            .text{
+
+            .text {
                 display: flex;
                 flex-direction: column;
                 width: 40%;
-                h3{
+
+                h3 {
                     font-size: 40px;
                     font-weight: 600;
                 }
-                p{
+
+                p {
                     font-size: 25px;
                     color: $secondary;
                 }
-                .buttons{
+
+                .buttons {
                     display: flex;
                     flex-direction: row;
                 }
-                .social{
+
+                .social {
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -154,53 +183,61 @@ body{
                     width: 50px;
                     height: 50px;
                     border: 2px solid $primary;
-                    img{
+
+                    img {
                         width: 30px;
                         height: 30px;
                     }
                 }
-                
+
             }
-            img{
+
+            img {
                 margin: 20px 0;
                 width: 500px;
             }
         }
-        .statistics{
+
+        .statistics {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-around;
             width: 100%;
             height: 60px;
-            .element{
+
+            .element {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                .count{
+
+                .count {
                     font-size: 28px;
                     font-weight: 600;
                     color: $secondary;
                     margin-bottom: -10px;
                 }
-                .info-text{
+
+                .info-text {
                     font-size: 25px;
                     font-weight: 500;
                     color: $secondary;
-                
+
                 }
             }
         }
     }
 }
-.books{
+
+.books {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin-top: 70px;
-    .header{
+
+    .header {
         display: flex;
         flex-direction: row;
         width: 89%;
@@ -209,7 +246,8 @@ body{
         color: $primary;
         margin-bottom: 10px;
     }
-    .book-cards{
+
+    .book-cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 50px;
@@ -218,51 +256,60 @@ body{
         justify-items: center;
     }
 }
-.card{
+
+.card {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 250px;
     background-color: white;
     padding: 15px;
-    margin: 0!important;
-    .img{
+    margin: 0 !important;
+
+    .img {
         position: inherit;
         width: 100%;
         height: 180px;
         border-radius: 5px;
-        .category{
+
+        .category {
             position: absolute;
             bottom: 10px;
             right: 10px;
             z-index: 10;
             opacity: 0.8;
         }
-        .btn:hover{
+
+        .btn:hover {
             background-color: #0d6efd;
             border: 1px solid #0d6efd;
             cursor: default;
         }
-        img{
+
+        img {
             border-radius: 5px;
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
     }
-    .info{
+
+    .info {
         display: flex;
         flex-direction: column;
         width: 100%;
         margin-top: 15px;
-        a{
+
+        a {
             text-decoration: none;
         }
-        p{
-            margin: 0!important;
-            padding: 0!important;
+
+        p {
+            margin: 0 !important;
+            padding: 0 !important;
         }
-        .book-name{
+
+        .book-name {
             font-size: 20px;
             font-weight: 500;
             color: $dark;
@@ -270,7 +317,8 @@ body{
             text-overflow: ellipsis;
             overflow: hidden;
         }
-        .book-author{
+
+        .book-author {
             font-size: 15px;
             font-weight: 400;
             color: $secondary;
@@ -278,45 +326,51 @@ body{
             text-overflow: ellipsis;
             overflow: hidden;
         }
-        .book-summary{
+
+        .book-summary {
             font-size: 13px;
             font-weight: 400;
             color: $secondary;
-            margin-top: 10px!important;
+            margin-top: 10px !important;
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
         }
     }
-    .prices{
+
+    .prices {
         width: 100%;
         display: flex;
         flex-direction: row;
         align-items: end;
         margin-top: 15px;
-        del{
+
+        del {
             font-size: 15px;
             font-weight: 500;
             padding-bottom: 2px;
             margin-right: 5px;
             color: $secondary;
         }
-        p{
+
+        p {
             font-size: 20px;
             font-weight: 500;
-            margin: 0!important;
-            margin: 0!important;
+            margin: 0 !important;
+            margin: 0 !important;
             color: $primary;
         }
     }
-    .events{
+
+    .events {
         display: flex;
         flex-direction: row;
         align-items: center;
         width: 100%;
         margin: 10px;
         justify-content: space-between;
-        .favorite{
+
+        .favorite {
             width: 38px;
             height: 38px;
             display: flex;
@@ -324,21 +378,70 @@ body{
             justify-content: center;
             border-radius: 50%;
             border: 1px solid $primary;
-            img{
+
+            img {
                 height: 50%;
                 width: 50%;
             }
         }
     }
 }
-.admin{
+
+.admin {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    .form{
+
+    .form {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        .image {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            border-radius: 5px;
+            justify-content: start;
+            .del-img{
+                position: absolute;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                right: 10px;
+                top: 10px;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            .image-container {
+                width: 25%;
+                height: 100%;
+                border-radius: 5px 0px 0px 5px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 5px 0px 0px 5px;
+
+                }
+            }
+
+            .link {
+                margin: 0px;
+                padding: 0px;
+                margin-left: 15px;
+                width: 70%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
     }
 }
