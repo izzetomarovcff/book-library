@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Card from '../components/Card'
+import { useSelector } from 'react-redux'
 
 function Books() {
+    const {GeneralResponse} = useSelector(state=>state)
     const [search, setSearch] = useState({
         search:""
     })
@@ -53,7 +55,7 @@ function Books() {
             </form>
             <div className='header'> Kiatablar </div>
             <div className='book-cards'>
-                {data == null ? (<div>Data Base Də Kitab Yoxdur!</div>) : (data.length == 0 ? (<div>Data Base Də Kitab Yoxdur!</div>) : (
+                {data == null ? (<div className='mt-5 text-secondary fs-1'>Data Base Də Kitab Yoxdur!</div>) : (data.length == 0 ? (<div className='mt-5 text-secondary fs-1'>Data Base Də Kitab Yoxdur!</div>) : (
                     data.map((book, index) => {
                         return (
                             <Card data={book} key={index} />

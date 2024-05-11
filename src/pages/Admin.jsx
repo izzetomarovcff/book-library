@@ -130,7 +130,7 @@ function Admin() {
             </form>
             <form onSubmit={handleSubmitBook} className='form form-control w-50 mt-5'>
                 <h4 className='mt-3 text-secondary'>Kitab Əlavə Et</h4>
-                <input type="text" name='book_name' required value={bookFormData.book_name} onChange={handleChangebook} className='form-control mt-3' placeholder='Kitab Adı' />
+                <input type="text" name='book_name' required value={bookFormData.book_name} onChange={handleChangebook} className='form-control mt-3' placeholder='Kitab Adı'  />
                 <input type="text" name='book_author' required value={bookFormData.book_author} onChange={handleChangebook} className='form-control mt-3' placeholder='Müəllif Adı' />
                 <textarea type="text" name='book_summary' required value={bookFormData.book_summary} onChange={handleChangebook} className='form-control mt-3' placeholder='Kitabın Xülasəsi' />
                 {bookFormData.have_sale ? (<input type="text" name='old_price' required value={bookFormData.old_price} onChange={handleChangebook} className='form-control mt-3' placeholder='Endirimdən Öncəki Qiymət' />) : (null)}
@@ -146,7 +146,7 @@ function Admin() {
                         })
                     )}
                 </select>
-                {bookFormData.book_image_url =="" ? (<input type="file" name="book_image_url" id="book_image_url" className='form-control mt-3' onChange={handleImgUpload}/>):(null)}
+                {bookFormData.book_image_url =="" ? (<input type="file" name="book_image_url" id="book_image_url" className='form-control mt-3' onChange={handleImgUpload} required/>):(null)}
                 {bookFormData.book_image_url == "" ? (null):(
                     <div className='image mt-3 shadow-sm border'>
                         <div className="image-container">

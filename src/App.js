@@ -12,35 +12,43 @@ import { auth } from './firebase';
 import PrivateRoute from './privateroutes/PrivateRoute';
 import Books from './pages/Books';
 import Admin from './pages/Admin';
+import Cart from './pages/Cart';
+import Favorite from './pages/Favorite';
+import PrivateRouteAdmin from './privateroutes/PrivateRouteAdmin';
 function App() {
-  const dispatch = useDispatch(state=>state)
-  useEffect(()=>{
-    const listen = onAuthStateChanged(auth,(user)=>{
-      if(user){
+  const dispatch = useDispatch(state => state)
+  useEffect(() => {
+    const listen = onAuthStateChanged(auth, (user) => {
+      if (user) {
         dispatch(IsLogIn(true))
         dispatch(SetUser(user))
-      }else{
+      } else {
         dispatch(IsLogIn(false))
         dispatch(SetUser(null))
       }
     })
-    return()=>{
+    return () => {
       listen()
     }
-  },[])
-  return ( 
+  }, [])
+  return (
     <div className="App">
-        <Navbar/>
-            <Routes>
-              <Route path='/' element={<Home/>} />
-              <Route path='/books' element={<Books/>} />
-              <Route path='/admin' element={<Admin/>} />
-              <Route element={<PrivateRoute/>}>
-                <Route path='/login' element={<Login/>} />
-                <Route path='/signup' element={<Signup/>} />
-              </Route>
-            </Routes>
-        <Footer/>
+      <Navbar />
+      <Routes>
+        <Route element={<PrivateRouteAdmin />}>
+          <Route path='/admin' element={<Admin />} />
+        </Route>
+        <Route path='/' element={<Home />} />
+        <Route path='/books' element={<Books />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/favorite' element={<Favorite />} />
+
+        <Route element={<PrivateRoute />}>
+          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<Signup />} />
+        </Route>
+      </Routes>
+      <Footer />
 
     </div>
   );
