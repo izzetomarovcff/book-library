@@ -1,6 +1,6 @@
 import { signOut } from 'firebase/auth'
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React from 'react'
+import {  useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { auth } from '../firebase'
 
@@ -21,7 +21,7 @@ function Navbar() {
             <Link to={"/books"} className='linkto'>Kitablar</Link>
             <Link to={"/cart"} className='linkto'>Səbət</Link>
             <Link to={"/favorite"} className='linkto'>Sevimlilər</Link>
-            {GeneralResponse.user == null ? (null):(GeneralResponse.user.email == process.env.REACT_APP_FIREBASE_ADMIN_EMAIL ? (<Link to={"/admin"} className='linkto'>Admin</Link>):(null))}
+            {GeneralResponse.user == null ? (null):(GeneralResponse.user.email == process.env.REACT_APP_FIREBASE_ADMIN_EMAIL ? (<><Link to={"/categoryedit"} className='linkto'>Kategoriya</Link> <Link to={"/bookedit"} className='linkto'>Kitablar</Link><Link to={"/admin"} className='linkto'>Admin</Link></>):(null))}
         </div>
         {GeneralResponse.is_login ? (
           <div className='registery me-5'>

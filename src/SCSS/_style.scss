@@ -25,7 +25,7 @@ body {
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    top: 0;
+    top: 0px;
     z-index: 100;
 
     .pages {
@@ -237,6 +237,7 @@ body {
     width: 100%;
     margin-top: 70px;
     min-height: 90vh;
+
     .header {
         display: flex;
         flex-direction: row;
@@ -384,7 +385,8 @@ body {
                 width: 50%;
             }
         }
-        .favorited{
+
+        .favorited {
             width: 38px;
             height: 38px;
             display: flex;
@@ -393,6 +395,7 @@ body {
             border-radius: 50%;
             border: 1px solid $primary;
             background-color: $primary;
+
             img {
                 height: 50%;
                 width: 50%;
@@ -421,7 +424,8 @@ body {
             height: 100px;
             border-radius: 5px;
             justify-content: start;
-            .del-img{
+
+            .del-img {
                 position: absolute;
                 display: flex;
                 align-content: center;
@@ -433,6 +437,7 @@ body {
                 border-radius: 50%;
                 cursor: pointer;
             }
+
             .image-container {
                 width: 25%;
                 height: 100%;
@@ -459,13 +464,16 @@ body {
         }
     }
 }
-.cart, .favoritep{
+
+.cart,
+.favoritep {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin-top: 70px;
     min-height: 90vh;
+
     .header {
         display: flex;
         flex-direction: row;
@@ -475,7 +483,9 @@ body {
         color: $primary;
         margin-bottom: 10px;
     }
-    .cart-cards , .fav-cards{
+
+    .cart-cards,
+    .fav-cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 50px;
@@ -483,4 +493,214 @@ body {
         margin-top: 10px;
         justify-items: center;
     }
+}
+.bookedit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 70px;
+    min-height: 90vh;
+    .buttons {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    table{
+        border-collapse: collapse;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        .table100-head-book{
+            height: 60px;
+            background: $primary;
+            th{
+                color: white;
+            }
+            .column1{
+                width: 60px;
+                text-align: center;
+            }
+            .column2{
+                width: 200px;
+                text-align: center;
+            }
+            .column3{
+                width: 200px;
+                text-align: center;
+                
+            }
+            .column4{
+                width: 60px;
+                text-align: center;
+            }
+            .column5{
+                width: 200px;
+                text-align: center;
+            }
+        }
+        .table100-body-book{
+            td{
+                color: gray;
+                font-weight: 400;
+            }
+            .record1{
+                width: 60px;
+                text-align: center;
+            }
+            .record2{
+                width: 200px;
+                text-align: center;
+            }
+            .record3{
+                width: 200px;
+                text-align: center;
+            }
+            .record4{
+                width: 60px;
+                text-align: center;
+            }
+            .record5{
+                width: 200px;
+                text-align: center;
+            }
+            
+        }
+        .table100-body-book:nth-child(odd){
+            background-color: $light;
+        }
+        .table100-body-book:nth-child(even){
+            background-color: white;
+        }
+        .table100-body-book:hover{
+            background-color: #dfdfdf;
+        }
+    }
+}
+.categoryedit {
+    position: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 70px;
+    min-height: 90vh;
+    .categorymodal{
+        display: flex;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 200;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .bookform{
+            display: flex;
+            position: relative;
+            justify-content: center;
+            width: 30%;
+            height: 100%;
+            background-color: white;
+            border: 1px solid $light;
+            .closemodal{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background-color: $light;
+                border: 1px solid $secondary;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .form{
+                margin-top: 50px;
+                margin-bottom: 50px;
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+    }
+    .buttons {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    table {
+        border-collapse: collapse;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        .table100-head {
+            height: 60px;
+            background: $primary;
+            th{
+                color: white;
+            }
+            .column1{
+                width: 60px;
+                text-align: center;
+            }
+            .column2{
+                width: 400px;
+                text-align: center;
+            }
+            .column3{
+                width: 200px;
+                text-align: center;
+                
+            }
+        }
+        .table100-body{
+            td{
+                color: gray;
+                font-weight: 400;
+            }
+            .record1{
+                width: 60px;
+                text-align: center;
+            }
+            .record2{
+                width: 400px;
+                text-align: center;
+            }
+            .record3{
+                width: 200px;
+                text-align: center;
+            }
+        }
+        .table100-body:nth-child(odd){
+            background-color: $light;
+        }
+        .table100-body:nth-child(even){
+            background-color: white;
+        }
+        .table100-body:hover{
+            background-color: #dfdfdf;
+        }
+    }
+
 }

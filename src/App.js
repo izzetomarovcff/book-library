@@ -15,8 +15,11 @@ import Admin from './pages/Admin';
 import Cart from './pages/Cart';
 import Favorite from './pages/Favorite';
 import PrivateRouteAdmin from './privateroutes/PrivateRouteAdmin';
+import Categoryedit from './pages/Categoryedit';
+import Bookedit from './pages/Bookedit';
 function App() {
   const dispatch = useDispatch(state => state)
+  
   useEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -36,6 +39,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route element={<PrivateRouteAdmin />}>
+          <Route path='/bookedit' element={<Bookedit />} />
+          <Route path='/categoryedit' element={<Categoryedit />} />
           <Route path='/admin' element={<Admin />} />
         </Route>
         <Route path='/' element={<Home />} />

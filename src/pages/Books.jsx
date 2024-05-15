@@ -25,6 +25,7 @@ function Books() {
             console.log(error)
         })
     }
+
     useEffect(() => {
         fetch("http://localhost:3001/getbooks")
             .then(response => {
@@ -34,10 +35,10 @@ function Books() {
                 return response.json();
             })
             .then(data => {
-                console.log(data)
                 setData(data)
             })
     }, [])
+
      const handleSearchChange = (e)=>{
         const { name, value } = e.target;
         setSearch(prevState => ({
@@ -55,6 +56,7 @@ function Books() {
             </form>
             <div className='header'> Kiatablar </div>
             <div className='book-cards'>
+                
                 {data == null ? (<div className='mt-5 text-secondary fs-1'>Data Base Də Kitab Yoxdur!</div>) : (data.length == 0 ? (<div className='mt-5 text-secondary fs-1'>Data Base Də Kitab Yoxdur!</div>) : (
                     data.map((book, index) => {
                         return (

@@ -123,7 +123,7 @@ function Admin() {
     }
     return (
         <div className='admin mt-5 pt-5'>
-            <form onSubmit={handleSubmitCategory} className=' form form-control w-50 mt-2'>
+            <form onSubmit={handleSubmitCategory} className='form form-control w-50 mt-2'>
                 <h4 className='mt-3 text-secondary'>Kategoriya Əlavə Et</h4>
                 <input type="text" required name="category_name" value={categoryFormData.category_name} onChange={handleChangecategory} className='form-control mt-3' placeholder='Kategoriya Adı' autoComplete='off' />
                 <button className='btn btn-primary mt-3 mb-2 w-50' type='submit'>Kategoriya Əlavə Et</button>
@@ -146,7 +146,7 @@ function Admin() {
                         })
                     )}
                 </select>
-                {bookFormData.book_image_url =="" ? (<input type="file" name="book_image_url" id="book_image_url" className='form-control mt-3' onChange={handleImgUpload} required/>):(null)}
+                {bookFormData.book_image_url == "" ? (<input type="file" name="book_image_url" id="book_image_url" className='form-control mt-3' onChange={handleImgUpload} required/>):(null)}
                 {bookFormData.book_image_url == "" ? (null):(
                     <div className='image mt-3 shadow-sm border'>
                         <div className="image-container">

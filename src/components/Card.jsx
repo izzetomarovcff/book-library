@@ -1,10 +1,9 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { AddToCart, AddToFavorite, RemoveToCart, RemoveToFavorite } from '../Redux/actions'
 
 function Card(props) {
-  const dispatch = useDispatch(state=>state)
+  const dispatch = useDispatch()
   const {GeneralResponse} = useSelector(state=>state)
 
     return (

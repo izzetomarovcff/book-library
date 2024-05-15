@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 
 function Login() {
   const dispatch = useDispatch()
+
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -43,7 +44,6 @@ function Login() {
                 <span className='text-primary ms-2 me-2'>•</span>
                 <Link to={"/"}>Şifrəmi Unutdum?</Link>
                 </div>
-                
             </form>
             
         </div>
