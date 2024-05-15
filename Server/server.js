@@ -64,6 +64,18 @@ app.post('/editcategory',(req,res)=>{
     res.json(result)
   })
 })
+app.post('/editbook',(req,res)=>{
+  const {id,book_category,book_image_url,book_name,book_author,book_summary,have_sale,old_price,price} = req.body
+  const sql = `UPDATE books SET book_category = "${book_category}",book_image_url = "${book_image_url}",book_name = "${book_name}",book_author = "${book_author}",book_summary = "${book_summary}",have_sale = "${have_sale}",old_price = "${old_price}",price = "${price}" WHERE id=${id};`
+  connection.query(sql,(err,result)=>{
+    if (err) {
+      console.error('Error querying the database: ' + err.stack);
+      res.status(500).json({ error: 'Internal server error' });
+      return;
+    }
+    res.json(result)
+  })
+})
 app.delete("/delcategory", (req, res) => {
   const { id } = req.body
   const sql = `DELETE FROM category WHERE id=${id}`

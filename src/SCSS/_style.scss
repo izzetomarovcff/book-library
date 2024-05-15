@@ -4,20 +4,16 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-
 ::-webkit-scrollbar {
     width: 0px;
     height: 0px;
 }
-
 body {
     width: 100%;
 }
-
 .App {
     width: 100%;
 }
-
 .nav {
     width: 100%;
     display: flex;
@@ -27,11 +23,9 @@ body {
     position: fixed;
     top: 0px;
     z-index: 100;
-
     .pages {
         display: flex;
         flex-direction: row;
-
         .linkto {
             font-size: 20px;
             text-decoration: none;
@@ -39,16 +33,13 @@ body {
             color: $secondary;
             transition: ease-in .2s;
         }
-
         :hover {
             color: $primary;
         }
     }
-
     .registery {
         display: flex;
         flex-direction: row;
-
         .linkto {
             font-size: 20px;
             text-decoration: none;
@@ -57,13 +48,11 @@ body {
             transition: ease-in .2s;
             cursor: pointer;
         }
-
         :hover {
             color: $primary;
         }
     }
 }
-
 .footer {
     width: 100%;
     margin-top: 50px;
@@ -71,18 +60,15 @@ body {
     display: flex;
     flex-direction: column;
     padding-top: 20px;
-
     .links {
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-
         .info {
             width: 200px;
             display: flex;
             flex-direction: column;
-
             a {
                 text-decoration: none;
                 transition: ease-in .2s;
@@ -90,19 +76,16 @@ body {
         }
 
     }
-
     .footer-bottom {
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-
         a {
             text-decoration: none;
         }
     }
 }
-
 .signup,
 .login {
     position: absolute;
@@ -114,18 +97,15 @@ body {
     height: 100vh;
     z-index: 100;
     background-color: $light;
-
     a {
         text-decoration: none;
     }
-
     .card {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 50%;
         background-color: $light;
-
         .form {
             width: 60%;
             display: flex;
@@ -134,47 +114,39 @@ body {
         }
     }
 }
-
 .home {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 70px;
     width: 100%;
-
     .homecontainer {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 90%;
-
         .wellcome {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-around;
             width: 100%;
-
             .text {
                 display: flex;
                 flex-direction: column;
                 width: 40%;
-
                 h3 {
                     font-size: 40px;
                     font-weight: 600;
                 }
-
                 p {
                     font-size: 25px;
                     color: $secondary;
                 }
-
                 .buttons {
                     display: flex;
                     flex-direction: row;
                 }
-
                 .social {
                     display: flex;
                     justify-content: center;
@@ -183,21 +155,17 @@ body {
                     width: 50px;
                     height: 50px;
                     border: 2px solid $primary;
-
                     img {
                         width: 30px;
                         height: 30px;
                     }
                 }
-
             }
-
             img {
                 margin: 20px 0;
                 width: 500px;
             }
         }
-
         .statistics {
             display: flex;
             flex-direction: row;
@@ -205,31 +173,26 @@ body {
             justify-content: space-around;
             width: 100%;
             height: 60px;
-
             .element {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-
                 .count {
                     font-size: 28px;
                     font-weight: 600;
                     color: $secondary;
                     margin-bottom: -10px;
                 }
-
                 .info-text {
                     font-size: 25px;
                     font-weight: 500;
                     color: $secondary;
-
                 }
             }
         }
     }
 }
-
 .books {
     display: flex;
     flex-direction: column;
@@ -237,7 +200,6 @@ body {
     width: 100%;
     margin-top: 70px;
     min-height: 90vh;
-
     .header {
         display: flex;
         flex-direction: row;
@@ -247,7 +209,6 @@ body {
         color: $primary;
         margin-bottom: 10px;
     }
-
     .book-cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -257,7 +218,6 @@ body {
         justify-items: center;
     }
 }
-
 .card {
     display: flex;
     flex-direction: column;
@@ -266,13 +226,11 @@ body {
     background-color: white;
     padding: 15px;
     margin: 0 !important;
-
     .img {
         position: inherit;
         width: 100%;
         height: 180px;
         border-radius: 5px;
-
         .category {
             position: absolute;
             bottom: 10px;
@@ -280,13 +238,11 @@ body {
             z-index: 10;
             opacity: 0.8;
         }
-
         .btn:hover {
             background-color: #0d6efd;
             border: 1px solid #0d6efd;
             cursor: default;
         }
-
         img {
             border-radius: 5px;
             width: 100%;
@@ -294,22 +250,18 @@ body {
             object-fit: cover;
         }
     }
-
     .info {
         display: flex;
         flex-direction: column;
         width: 100%;
         margin-top: 15px;
-
         a {
             text-decoration: none;
         }
-
         p {
             margin: 0 !important;
             padding: 0 !important;
         }
-
         .book-name {
             font-size: 20px;
             font-weight: 500;
@@ -318,7 +270,6 @@ body {
             text-overflow: ellipsis;
             overflow: hidden;
         }
-
         .book-author {
             font-size: 15px;
             font-weight: 400;
@@ -327,7 +278,6 @@ body {
             text-overflow: ellipsis;
             overflow: hidden;
         }
-
         .book-summary {
             font-size: 13px;
             font-weight: 400;
@@ -338,14 +288,12 @@ body {
             overflow: hidden;
         }
     }
-
     .prices {
         width: 100%;
         display: flex;
         flex-direction: row;
         align-items: end;
         margin-top: 15px;
-
         del {
             font-size: 15px;
             font-weight: 500;
@@ -353,7 +301,6 @@ body {
             margin-right: 5px;
             color: $secondary;
         }
-
         p {
             font-size: 20px;
             font-weight: 500;
@@ -362,7 +309,6 @@ body {
             color: $primary;
         }
     }
-
     .events {
         display: flex;
         flex-direction: row;
@@ -370,7 +316,6 @@ body {
         width: 100%;
         margin: 10px;
         justify-content: space-between;
-
         .favorite {
             width: 38px;
             height: 38px;
@@ -379,13 +324,11 @@ body {
             justify-content: center;
             border-radius: 50%;
             border: 1px solid $primary;
-
             img {
                 height: 50%;
                 width: 50%;
             }
         }
-
         .favorited {
             width: 38px;
             height: 38px;
@@ -395,7 +338,6 @@ body {
             border-radius: 50%;
             border: 1px solid $primary;
             background-color: $primary;
-
             img {
                 height: 50%;
                 width: 50%;
@@ -403,18 +345,15 @@ body {
         }
     }
 }
-
 .admin {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-
     .form {
         display: flex;
         flex-direction: column;
         align-items: center;
-
         .image {
             position: relative;
             display: flex;
@@ -424,7 +363,6 @@ body {
             height: 100px;
             border-radius: 5px;
             justify-content: start;
-
             .del-img {
                 position: absolute;
                 display: flex;
@@ -437,21 +375,17 @@ body {
                 border-radius: 50%;
                 cursor: pointer;
             }
-
             .image-container {
                 width: 25%;
                 height: 100%;
                 border-radius: 5px 0px 0px 5px;
-
                 img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                     border-radius: 5px 0px 0px 5px;
-
                 }
             }
-
             .link {
                 margin: 0px;
                 padding: 0px;
@@ -464,7 +398,6 @@ body {
         }
     }
 }
-
 .cart,
 .favoritep {
     display: flex;
@@ -473,7 +406,6 @@ body {
     width: 100%;
     margin-top: 70px;
     min-height: 90vh;
-
     .header {
         display: flex;
         flex-direction: row;
@@ -483,7 +415,6 @@ body {
         color: $primary;
         margin-bottom: 10px;
     }
-
     .cart-cards,
     .fav-cards {
         display: grid;
@@ -494,7 +425,7 @@ body {
         justify-items: center;
     }
 }
-.bookedit{
+.bookedit {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -508,7 +439,7 @@ body {
         align-items: center;
         justify-content: flex-end;
     }
-    table{
+    table {
         border-collapse: collapse;
         background: #fff;
         border-radius: 10px;
@@ -516,81 +447,70 @@ body {
         width: 90%;
         margin: 0 auto;
         position: relative;
-        .table100-head-book{
+        .table100-head-book {
             height: 60px;
             background: $primary;
-            th{
+            th {
                 color: white;
             }
-            .column1{
+            .column1 {
                 width: 60px;
                 text-align: center;
             }
-            .column2{
+            .column2 {
                 width: 200px;
                 text-align: center;
             }
-            .column3{
+            .column3 {
                 width: 200px;
                 text-align: center;
-                
             }
-            .column4{
+            .column4 {
                 width: 60px;
                 text-align: center;
             }
-            .column5{
+            .column5 {
                 width: 200px;
                 text-align: center;
             }
         }
-        .table100-body-book{
-            td{
+        .table100-body-book {
+            td {
                 color: gray;
                 font-weight: 400;
             }
-            .record1{
+            .record1 {
                 width: 60px;
                 text-align: center;
             }
-            .record2{
+            .record2 {
                 width: 200px;
                 text-align: center;
             }
-            .record3{
+            .record3 {
                 width: 200px;
                 text-align: center;
             }
-            .record4{
+            .record4 {
                 width: 60px;
                 text-align: center;
             }
-            .record5{
+            .record5 {
                 width: 200px;
                 text-align: center;
             }
-            
         }
-        .table100-body-book:nth-child(odd){
+        .table100-body-book:nth-child(odd) {
             background-color: $light;
         }
-        .table100-body-book:nth-child(even){
+        .table100-body-book:nth-child(even) {
             background-color: white;
         }
-        .table100-body-book:hover{
+        .table100-body-book:hover {
             background-color: #dfdfdf;
         }
     }
-}
-.categoryedit {
-    position: inherit;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-top: 70px;
-    min-height: 90vh;
-    .categorymodal{
+    .bookmodal{
         display: flex;
         position: fixed;
         width: 100vw;
@@ -609,7 +529,7 @@ body {
             height: 100%;
             background-color: white;
             border: 1px solid $light;
-            .closemodal{
+            .closemodal {
                 position: absolute;
                 top: 10px;
                 right: 10px;
@@ -622,13 +542,115 @@ body {
                 border-radius: 50%;
                 background-color: $light;
                 border: 1px solid $secondary;
-                img{
+                img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                 }
             }
-            .form{
+            .form {
+                margin-top: 50px;
+                margin-bottom: 50px;
+                width: 90%;
+                height: 560px;
+                display: flex;
+                flex-direction: column;
+                .imagediv{
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 80px;
+                    border-radius: 5px;
+                    .del-img{
+                        position: absolute;
+                        display: flex;
+                        align-content: center;
+                        justify-content: center;
+                        right: 5px;
+                        top: 5px;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                    }
+                    .img{
+                        width: 30%;
+                        height: 100%;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 5px 0 0 5px;
+                        }
+                    }
+                    .info{
+                        margin-right: 10px;
+                        display: flex;
+                        align-items: center;
+                        width: 60%;
+                        height: 100%;
+                        a{
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    
+}
+.categoryedit {
+    position: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 70px;
+    min-height: 90vh;
+    .categorymodal {
+        display: flex;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 200;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .categoryform {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            width: 30%;
+            height: 100%;
+            background-color: white;
+            border: 1px solid $light;
+            .closemodal {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background-color: $light;
+                border: 1px solid $secondary;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .form {
                 margin-top: 50px;
                 margin-bottom: 50px;
                 width: 90%;
@@ -645,7 +667,6 @@ body {
         align-items: center;
         justify-content: flex-end;
     }
-
     table {
         border-collapse: collapse;
         background: #fff;
@@ -657,50 +678,48 @@ body {
         .table100-head {
             height: 60px;
             background: $primary;
-            th{
+            th {
                 color: white;
             }
-            .column1{
+            .column1 {
                 width: 60px;
                 text-align: center;
             }
-            .column2{
+            .column2 {
                 width: 400px;
                 text-align: center;
             }
-            .column3{
+            .column3 {
                 width: 200px;
                 text-align: center;
-                
             }
         }
-        .table100-body{
-            td{
+        .table100-body {
+            td {
                 color: gray;
                 font-weight: 400;
             }
-            .record1{
+            .record1 {
                 width: 60px;
                 text-align: center;
             }
-            .record2{
+            .record2 {
                 width: 400px;
                 text-align: center;
             }
-            .record3{
+            .record3 {
                 width: 200px;
                 text-align: center;
             }
         }
-        .table100-body:nth-child(odd){
+        .table100-body:nth-child(odd) {
             background-color: $light;
         }
-        .table100-body:nth-child(even){
+        .table100-body:nth-child(even) {
             background-color: white;
         }
-        .table100-body:hover{
+        .table100-body:hover {
             background-color: #dfdfdf;
         }
     }
-
 }

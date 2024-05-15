@@ -11,7 +11,6 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase';
 import PrivateRoute from './privateroutes/PrivateRoute';
 import Books from './pages/Books';
-import Admin from './pages/Admin';
 import Cart from './pages/Cart';
 import Favorite from './pages/Favorite';
 import PrivateRouteAdmin from './privateroutes/PrivateRouteAdmin';
@@ -41,7 +40,6 @@ function App() {
         <Route element={<PrivateRouteAdmin />}>
           <Route path='/bookedit' element={<Bookedit />} />
           <Route path='/categoryedit' element={<Categoryedit />} />
-          <Route path='/admin' element={<Admin />} />
         </Route>
         <Route path='/' element={<Home />} />
         <Route path='/books' element={<Books />} />
